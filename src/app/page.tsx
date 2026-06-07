@@ -207,7 +207,17 @@ export default function Home() {
                   <h3 style={{ color: '#D4AF37', fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
                     {proximaGala ? `Próxima Gala: ${proximaGala.name}` : 'Próxima Etapa: Glamour'}
                   </h3>
-                  <Countdown targetDate={proximaGala ? `${proximaGala.date}T${proximaGala.time}` : '2026-09-27T21:00:00'} />
+                  <div style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                    fontWeight: 900,
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.2em',
+                    textShadow: '0 0 20px rgba(212,175,55,0.6)'
+                  }}>
+                    Pronto
+                  </div>
                 </div>
               </div>
             </div>
