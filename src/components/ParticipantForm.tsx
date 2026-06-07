@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 import ImageUploader from '@/components/ImageUploader';
 
-export default function ParticipantForm({ participant, onClose, onSaved }) {
+export default function ParticipantForm({ participant, onClose, onSaved }: { participant?: any, onClose: () => void, onSaved: () => void }) {
   const isEdit = !!participant;
   const [stageName, setStageName] = useState(participant?.stage_name || '');
   const [realName, setRealName] = useState(participant?.real_name || '');
@@ -14,7 +14,7 @@ export default function ParticipantForm({ participant, onClose, onSaved }) {
   const [saving, setSaving] = useState(false);
   const [showUploader, setShowUploader] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setSaving(true);
     const payload = {
